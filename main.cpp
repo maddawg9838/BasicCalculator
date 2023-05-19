@@ -22,7 +22,9 @@ int main()
         cout << "2. Subtraction" << endl;
         cout << "3. Multiplication" << endl;
         cout << "4. Division" << endl;
-        cout << "5. Quit" << endl;
+        cout << "5. Exponents" << endl;
+        cout << "6. Square Roots" << endl;
+        cout << "7. Quit" << endl;
 
         cin >> operation;
         switch (operation)
