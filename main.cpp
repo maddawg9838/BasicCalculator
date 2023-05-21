@@ -4,7 +4,6 @@
 
 using namespace std;
 
-// Fixes: Division;
 // Additions: Check for doubles for quantity of numbers in operation
 
 // Function prototypes
@@ -186,12 +185,12 @@ double Division()
         cin >> element[i];
     }
 
-    value = element[1];
+    total = element[1];
 
-    for (int i = 1; i <= quantity_numbers;)
+    for (int i = 1; i < quantity_numbers;)
     {
         i++;
-        total = value/element[i];
+        total = total/element[i];
     }
     return total;
 }
