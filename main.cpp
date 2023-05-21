@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// Additions: Check for doubles for quantity of numbers in operation
+// Additions: Check for doubles for quantity of numbers in operation, add factorials, & special square rooting
 
 // Function prototypes
 double Subtraction();
