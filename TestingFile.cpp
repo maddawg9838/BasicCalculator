@@ -88,13 +88,20 @@ int main()
         /*
         case 7:
         {
+            total = FindRoot();
+            cout << "The root is " << total;
+            moreMath = Continue();
+        }
+        break;
+        case 8:
+        {
             total = Factorial();
             cout << "The final total of the factorial is " << total;
             moreMath = Continue();
         }
         break;
         */           
-        case 8:
+        case 9:
         {
             cout << "Thanks for using this Calculator! Bye Bye" << endl;
             return (0);
