@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// Fixes: Don't return totals just simply display within functions?
+
 // Additions: Check for doubles for quantity of numbers in operation, add factorials, & special square rooting
 
 // Function prototypes
@@ -13,6 +15,8 @@ double Multiplication();
 double Division();
 double Exponents();
 double SquareRoots();
+double SpecialSquareRoot();
+double Factorial();
 bool Continue();
 
 int main()
@@ -81,7 +85,16 @@ int main()
             moreMath = Continue();
         }
         break;
+        /*
         case 7:
+        {
+            total = Factorial();
+            cout << "The final total of the factorial is " << total;
+            moreMath = Continue();
+        }
+        break;
+        */           
+        case 8:
         {
             cout << "Thanks for using this Calculator! Bye Bye" << endl;
             return (0);
@@ -249,6 +262,27 @@ double SquareRoots()
 
     return total;
 }
+
+/*
+double factorial()
+{
+    double total = 1;
+    int baseNumber;
+    
+    cout << fixed << setprecision(2) << endl;
+    
+    cout << "What is the number we are finding the factorial of? " << endl;
+    cout << "Number: ";
+    cin >> baseNumber;
+    
+    for (int i = baseNumber; i > 0; i--)
+    {
+        total *= i; 
+    }
+    
+    return total;
+}
+*/
 
 bool Continue()
 {
