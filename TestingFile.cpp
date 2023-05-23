@@ -6,7 +6,7 @@ using namespace std;
 
 // Fixes: Don't return totals just simply display within functions?
 
-// Additions: Check for doubles for quantity of numbers in operation, add factorials, & special square rooting
+// Additions: Check for doubles for quantity of numbers in operation & special square rooting
 
 // Function prototypes
 double Subtraction();
@@ -15,7 +15,7 @@ double Multiplication();
 double Division();
 double Exponents();
 double SquareRoots();
-double SpecialSquareRoot();
+double FindRoot();
 double Factorial();
 bool Continue();
 
@@ -264,6 +264,25 @@ double SquareRoots()
 }
 
 /*
+double FindRoot()
+{
+    double total;
+    int baseNumber;
+    int index;
+    
+    
+    cout << fixed << setprecision(2) << endl;
+    
+    cout << "What is the base number or radicand we are finding the root of?" << endl;
+    cout << "Radicand: ";
+    cin >> baseNumber;
+    cout << "What is the index or root value?" << endl;
+    cin >> index;
+    
+    total = pow(baseNumber, 1/index)
+    return total;
+}
+
 double factorial()
 {
     double total = 1;
