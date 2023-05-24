@@ -4,9 +4,8 @@
 
 using namespace std;
 
-// Fixes: Don't return totals just simply display within functions?
-
-// Additions: Check for doubles for quantity of numbers in operation & special square rooting
+// Addition: Check for doubles for quantity of numbers in operation & special square rooting
+// Addition: Don't return totals just simply display within functions?
 
 // Function prototypes
 double Subtraction();
@@ -36,7 +35,9 @@ int main()
         cout << "4. Division" << endl;
         cout << "5. Exponents" << endl;
         cout << "6. Square Roots" << endl;
-        cout << "7. Quit" << endl;
+        cout << "7. Finding A Root" << endl;
+        cout << "8. Factorial" << endl;
+        cout << "9. Quit" << endl;
 
         total = 0;
 
@@ -85,7 +86,6 @@ int main()
             moreMath = Continue();
         }
         break;
-        /*
         case 7:
         {
             total = FindRoot();
@@ -100,7 +100,6 @@ int main()
             moreMath = Continue();
         }
         break;
-        */           
         case 9:
         {
             cout << "Thanks for using this Calculator! Bye Bye" << endl;
@@ -270,13 +269,70 @@ double SquareRoots()
     return total;
 }
 
-/*
 double FindRoot()
 {
-    double total;
-    int baseNumber;
-    int index;
+    double total, baseNumber, index, useIndex;
     
+    
+    cout << fixed << setprecision(2) << endl;
+    
+    cout << "What is the base number or radicand we are finding the root of?" << endl;
+    cout << "Radicand: ";
+    cin >> baseNumber;
+    cout << "What is the index or root value?" << endl;
+    cin >> index;
+    
+    useIndex = 1/index;
+    
+    total = pow(baseNumber, useIndex);
+    return total;
+}
+
+double Factorial()
+{
+    double total = 1;
+    int baseNumber;
+    
+    cout << fixed << setprecision(2) << endl;
+    
+    cout << "What is the number we are finding the factorial of? " << endl;
+    cout << "Number: ";
+    cin >> baseNumber;
+    
+    for (int i = baseNumber; i > 0; i--)
+    {
+        total *= i; 
+    }
+    
+    return total;
+}
+
+bool Continue()
+{
+    char moreMath;
+
+    cout << endl << endl;
+
+    cout << "Do you want to continue doing some math? Please enter n or N for no or Y or y for yes. ";
+    cin >> moreMath;
+
+    while (moreMath != 'n' && moreMath != 'N' && moreMath != 'y' && moreMath != 'Y')
+    {
+        cout << "Please enter a valid submission. Enter n or N for no or Y or y for yes. ";
+        cin >> moreMath;
+    }
+
+    if (moreMath == 'n' || moreMath == 'N')
+    {
+        return false;
+    }
+    else if (moreMath == 'y' || moreMath == 'Y')
+    {
+        return true;
+    }
+
+    return false;
+}
     
     cout << fixed << setprecision(2) << endl;
     
