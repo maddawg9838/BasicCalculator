@@ -4,7 +4,8 @@
 
 using namespace std;
 
-// Additions: Check for doubles for quantity of numbers in operation, add factorials, & special square rooting
+// Addition: Check for doubles for quantity of numbers in operation & special square rooting
+// Addition: Don't return totals just simply display within functions?
 
 // Function prototypes
 double Subtraction();
@@ -13,6 +14,8 @@ double Multiplication();
 double Division();
 double Exponents();
 double SquareRoots();
+double FindRoot();
+double Factorial();
 bool Continue();
 
 int main()
@@ -32,7 +35,9 @@ int main()
         cout << "4. Division" << endl;
         cout << "5. Exponents" << endl;
         cout << "6. Square Roots" << endl;
-        cout << "7. Quit" << endl;
+        cout << "7. Finding A Root" << endl;
+        cout << "8. Factorial" << endl;
+        cout << "9. Quit" << endl;
 
         total = 0;
 
@@ -82,6 +87,20 @@ int main()
         }
         break;
         case 7:
+        {
+            total = FindRoot();
+            cout << "The root is " << total;
+            moreMath = Continue();
+        }
+        break;
+        case 8:
+        {
+            total = Factorial();
+            cout << "The final total of the factorial is " << total;
+            moreMath = Continue();
+        }
+        break;
+        case 9:
         {
             cout << "Thanks for using this Calculator! Bye Bye" << endl;
             return (0);
@@ -247,6 +266,44 @@ double SquareRoots()
 
     total = sqrt(baseNumber);
 
+    return total;
+}
+
+double FindRoot()
+{
+    double total, baseNumber, index, useIndex;
+    
+    
+    cout << fixed << setprecision(2) << endl;
+    
+    cout << "What is the base number or radicand we are finding the root of?" << endl;
+    cout << "Radicand: ";
+    cin >> baseNumber;
+    cout << "What is the index or root value?" << endl;
+    cin >> index;
+    
+    useIndex = 1/index;
+    
+    total = pow(baseNumber, useIndex);
+    return total;
+}
+
+double Factorial()
+{
+    double total = 1;
+    int baseNumber;
+    
+    cout << fixed << setprecision(2) << endl;
+    
+    cout << "What is the number we are finding the factorial of? " << endl;
+    cout << "Number: ";
+    cin >> baseNumber;
+    
+    for (int i = baseNumber; i > 0; i--)
+    {
+        total *= i; 
+    }
+    
     return total;
 }
 
