@@ -4,8 +4,8 @@
 
 using namespace std;
 
-// Addition: Check for doubles for quantity of numbers in operation & special square rooting
-// Addition: Don't return totals just simply display within functions?
+// Completed: 6-12-23! 
+// Author: Maddawg9838
 
 // Function prototypes
 double Subtraction();
@@ -24,8 +24,10 @@ int main()
     double total;
     bool moreMath;
 
+    // Formatting
     cout << fixed << setprecision(2) << endl;
 
+    // Operations Menu
     do
     {
         cout << "Please choose an operation from the menu below" << endl;
@@ -42,6 +44,8 @@ int main()
         total = 0;
 
         cin >> operation;
+        
+        // Switch associated with the menu
         switch (operation)
         {
         case 1:
@@ -114,6 +118,7 @@ int main()
     return (0);
 }
 
+// Function double Addition adds as many values together using a for loop
 double Addition()
 {
     int quantity_numbers;
@@ -136,6 +141,7 @@ double Addition()
     return sum;
 }
 
+// Function double Subtraction subtracts as many values together using two for loops
 double Subtraction()
 {
     int quantity_numbers;
@@ -165,6 +171,7 @@ double Subtraction()
     return total;
 }
 
+// Function double Multiplication multiplies as many values together usinga for loop
 double Multiplication()
 {
     int quantity_numbers;
@@ -186,6 +193,7 @@ double Multiplication()
     return product;
 }
 
+// Function double Division divides as many values together using two for loops
 double Division()
 {
     int quantity_numbers;
@@ -214,6 +222,7 @@ double Division()
     return total;
 }
 
+// Function double Exponents calculates a value with any exponent
 double Exponents()
 {
     double total, baseNumber;
@@ -253,6 +262,7 @@ double Exponents()
     return total;
 }
 
+// Function double SquareRoots calculates the square root of any value
 double SquareRoots()
 {
     double total;
@@ -269,6 +279,7 @@ double SquareRoots()
     return total;
 }
 
+// Function double FindRoot calculates the value from any index on a root
 double FindRoot()
 {
     double total, baseNumber, index, useIndex;
@@ -288,6 +299,7 @@ double FindRoot()
     return total;
 }
 
+// Function double Factorial calculates the factorial of any value
 double Factorial()
 {
     double total = 1;
@@ -307,6 +319,7 @@ double Factorial()
     return total;
 }
 
+// Function bool Continue loops the program depending on whether the user wants to reuse the program
 bool Continue()
 {
     char moreMath;
