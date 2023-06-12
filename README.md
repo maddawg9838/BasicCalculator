@@ -13,5 +13,5 @@ This is a simple calculator which can perform simple operations in:
 
 with any amount of integers
 
-Completed! 
+Completed For Now! 
 Author: Maddawg9838
