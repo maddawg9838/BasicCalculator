@@ -12,3 +12,6 @@ This is a simple calculator which can perform simple operations in:
 9. Quit
 
 with any amount of integers
+
+Completed! 
+Author: Maddawg9838
